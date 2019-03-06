@@ -1,0 +1,48 @@
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible"
+              content="ie=edge">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <title>Dockumet</title>
+    </head>
+
+    <body>
+        <p class="gg"></p>
+        <script>
+            function main() {
+                console.log('helo');
+
+                var todo = {
+                    'from': "Rishav",
+                    'address': 'rishav394@gmail.com',
+                    'message': 'Hello boss',
+                    'subject': 'This is a test email'
+                };
+
+                $.ajax({
+                    type: 'POST',
+                    url: 'http:/localhost:100/send',
+                    data: todo,
+                    success: function (data) {
+                        //do something with the data via front-end framework
+                        console.log('success');
+                        $('.gg').text(data);
+                    },
+                    error: function (data) {
+                        console.log('failed');
+                        console.log(data.responseText);
+                        $('.gg').text(data.responseText);
+                    }
+                });
+                console.log('fin.');
+
+            }
+            $(document).ready(main);
+        </script>
+    </body>
+
+</html>

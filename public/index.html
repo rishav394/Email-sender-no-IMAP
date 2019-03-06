@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible"
+              content="IE=edge">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0" />
+        <title>POSTmail</title>
+        <!-- Material Icon CDN -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+              rel="stylesheet">
+        <!-- Materialize CSS CDN -->
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    </head>
+
+    <body>
+        <!-- Modal Structure -->
+        <div id="modal1"
+             class="modal">
+            <div class="modal-content">
+                <h4>Uhh sorry</h4>
+                <p>I do not handle GET requests.</p>
+                <p>Please make a POST request. A POST request can easily be made via aps like postman or <a
+                       href="https://curl.haxx.se/">curl</a>.</p>
+                <code>curl -d "from=value1&address=value2&message=value2&subject=value2" -X POST "the target url"</code>
+            </div>
+        </div>
+
+        <!-- jQuery CDN -->
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+                integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+                crossorigin="anonymous"></script>
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script>
+            $("document").ready(function () {
+                $('.modal').modal({
+                    opacity: 0.7,
+                    dismissible: false
+                });
+                $('.modal').modal('open');
+            });
+        </script>
+    </body>
+
+</html>
