@@ -70,7 +70,7 @@ typings/
 .vuepress/dist
 
 # Serverless directories
-.serverless
+.serveprless
 
 # FuseBox cache
 .fusebox/
